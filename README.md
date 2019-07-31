@@ -141,9 +141,12 @@ _someTuple = (some item, another item, last item,..._)
 
 ```
 >>> coord = (4.0, 3.2) 
->>> coord[1] 3.2 
+>>> coord[1] 
+3.2 
 >>> coord[1] = 2.9 
-Traceback (most recent call last): File "<stdin>", line 1, in <module> TypeError: 'tuple' object does not support item assignment
+Traceback (most recent call last):
+ File "<stdin>", line 1, in <module> 
+ TypeError: 'tuple' object does not support item assignment
 ```
 
 You can create a tuple from a tuple.  This will not change the original tuple, just copy it's values into a new one. Note the comma after the item in parenthesis.
