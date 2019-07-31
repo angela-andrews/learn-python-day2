@@ -84,24 +84,36 @@ Learn more about queues and stacks [here](https://www.101computing.net/stacks-an
 Next up is **.remove()** which is great when you want to remove an item by it's value. Strange thing is, if that item is a Boolean, it'll remove the item in the 0 index. I didn't know that was a thing until I just tested it.
 
 ```
-> my_list= [1,2,True,'apricot',5,'Cardi B'] >>> my_list.remove(True) >>> my_list [2, True, 'apricot', 5, 'Cardi B'] >>> my_list.remove(5) >>> my_list [2, True, 'apricot', 'Cardi B']
+> my_list= [1,2,True,'apricot',5,'Cardi B'] 
+>>> my_list.remove(True) 
+>>> my_list [2, True, 'apricot', 5, 'Cardi B'] 
+>>> my_list.remove(5) 
+>>> my_list [2, True, 'apricot', 'Cardi B']
 ```
 
 **.reverse() **is a handy for when you need to swap the order of the list.
 
 ```
->>> my_list ['a', 2, 3, 4, 5, 6, 7, 8, 9, 10] >>> my_list.reverse() >>> my_list [10, 9, 8, 7, 6, 5, 4, 3, 2, 'a'] >>> my_list.reverse() >>> my_list ['a', 2, 3, 4, 5, 6, 7, 8, 9, 10]
+>>> my_list ['a', 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+>>> my_list.reverse() 
+>>> my_list [10, 9, 8, 7, 6, 5, 4, 3, 2, 'a'] 
+>>> my_list.reverse() 
+>>> my_list ['a', 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
 Sometimes you just want to throw an item on the end, **.append()** does the trick. Add the item inside the method and voila!
 
 ```
->>> my_list ['a', 2, 3, 4, 5, 6, 7, 8, 9, 10] >>> my_list.append('bug') >>> my_list ['a', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'bug']
+>>> my_list ['a', 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+>>> my_list.append('bug') 
+>>> my_list ['a', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'bug']
 ```
 
 Last one is **.insert()**. You can add a new item to any position you want to in your list. Specify the index and the value and insert away. It'll make room and put your item right where you want it.
 ```
->>> my_list= [1,2,True,'apricot',5,'Cardi B'] >>> my_list.insert(2, 43.9) >>> my_list [1, 2, 43.9, True, 'apricot', 5, 'Cardi B']
+>>> my_list= [1,2,True,'apricot',5,'Cardi B'] 
+>>> my_list.insert(2, 43.9) 
+>>> my_list [1, 2, 43.9, True, 'apricot', 5, 'Cardi B']
 ```
 
 ## Tuples
@@ -110,7 +122,10 @@ Tuples are immutable and fixed-sized, meaning they cannot be changed. They're go
 _someTuple = (some item, another item, last item,..._)
 
 ```
->>> coord = (4.0, 3.2) >>> coord[1] 3.2 >>> coord[1] = 2.9 Traceback (most recent call last): File "<stdin>", line 1, in <module> TypeError: 'tuple' object does not support item assignment
+>>> coord = (4.0, 3.2) 
+>>> coord[1] 3.2 
+>>> coord[1] = 2.9 
+Traceback (most recent call last): File "<stdin>", line 1, in <module> TypeError: 'tuple' object does not support item assignment
 ```
 
 You can create a tuple from a tuple.  This will not change the original tuple, just copy it's values into a new one. Note the comma after the item in parenthesis.
