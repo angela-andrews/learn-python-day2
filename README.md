@@ -198,6 +198,7 @@ range(2, 22, 2)
 >>> list(range(2,22,2)) 
 [2, 4, 6, 8, 10, 12, 14, 16, 18, 20] 
 >>>
+```
 
 Not a bad first few days with Python.  Great stuff here and there is so much to learn. Stay tuned for tomorrows post. I think I'll go over dictionaries.
 
