@@ -35,7 +35,7 @@ Slicing up a list is a great way to access a group of items from the list. Inste
 
 **[start index:end index: step]**
 ```
->> my_list [1, 2, 3, 4, 5] 
+>>> my_list [1, 2, 3, 4, 5] 
 >>> my_list[0:2] [1, 2] 
 >>>
 ```
@@ -102,7 +102,7 @@ Learn more about queues and stacks [here](https://www.101computing.net/stacks-an
 Next up is **.remove()** which is great when you want to remove an item by it's value. Strange thing is, if that item is a Boolean, it'll remove the item in the 0 index. I didn't know that was a thing until I just tested it.
 
 ```
-> my_list= [1,2,True,'apricot',5,'Cardi B'] 
+>>> my_list= [1,2,True,'apricot',5,'Cardi B'] 
 >>> my_list.remove(True) 
 >>> my_list [2, True, 'apricot', 5, 'Cardi B'] 
 >>> my_list.remove(5) 
@@ -150,4 +150,55 @@ Traceback (most recent call last):
 ```
 
 You can create a tuple from a tuple.  This will not change the original tuple, just copy it's values into a new one. Note the comma after the item in parenthesis.
+
+```
+>>> coord = (4.0, 3.2) 
+>>> big_coord = coord + (0.8,) 
+>>> big_coord (4.0, 3.2, 0.8)
+```
+Since tuples are immutable, modifying isn't possible, but you can overwrite one.
+
+```
+>>> coord = (4.0, 3.2) 
+>>> coord (4.0, 3.2) 
+>>> coord = (2.2, 5.1) 
+>>> coord (2.2, 5.1)
+```
+
+This is pretty cool about tuples. You can unpack the items from a tuple and assign them to variables. As long as the number of items and variables are equal, you can easily unpack and assign those values.
+
+```
+>>> user_info=("Rasheeda", "Smith", "F", 342492) 
+>>> user_info ('Rasheeda', 'Smith', 'F', 342492) 
+>>> fn, ln, mi, id = user_info 
+>>> fn 
+'Rasheeda' 
+>>> ln 
+'Smith' 
+>>> mi 
+'F' 
+>>> id 342492
+```
+
+The last thing about tuples is that they remind me they can be used as template literals in that, you can  use a tuple to do string substitution.
+
+```
+>>> print("My favorite flavors of ice cream are %s and %s." % ("butter almond", "strawberry")) 
+My favorite flavors of ice cream are butter almond and strawberry. 
+>>>
+```
+## Ranges
+The last thing I covered was ranges. A great tool to quickly create a list of items in a range with just one method. Very similar to slicing, but way better if you want to create a quick list of  numbers. To get those numbers in to a list, use the list function. The values needed are the start, stop and the step. If you leave the step of, the list is in numerical order. 
+
+**range(start, stop, range)**
+
+```
+>>> range(2,22,2) 
+range(2, 22, 2) 
+>>> list(range(2,22,2)) 
+[2, 4, 6, 8, 10, 12, 14, 16, 18, 20] 
+>>>
+
+Not a bad first few days with Python.  Great stuff here and there is so much to learn. Stay tuned for tomorrows post. I think I'll go over dictionaries.
+
 
